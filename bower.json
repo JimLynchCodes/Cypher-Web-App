@@ -1,0 +1,24 @@
+{
+  "name": "Angular-Routes-Test",
+  "homepage": "https://github.com/JimTheMan/phaser-examples",
+  "authors": [
+    "James Lynch <jim@fantasyup.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.9",
+    "angular-route": "~1.4.9",
+    "angular-animate": "~1.4.9",
+    "angularfire": "~1.1.3"
+  }
+}
