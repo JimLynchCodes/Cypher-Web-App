@@ -632,3 +632,16 @@ input.ng-valid.ng-touched {
   color: red;
   padding-bottom: 10px;
 }
+
+.jim-box {
+
+/*  font-size: 20px; */
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 15px;
+
+}
+
+.big-font {
+
+}

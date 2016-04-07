@@ -1,10 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+<section class="card login">
+    <div class="card meetings cf">
 
-</body>
-</html>
+
+        <div class="big-font">
+            <p>
+                What's up?</p>
+            <h1>Here are the open rooms:</h1>
+            <div ng-repeat="room in roomsObject" ng-click="onRoomListItemClicked(room)">
+                <h1><p class="jim-box">Room: {{room.id}}</p></h1>
+                {{5 + 6}}
+                Body
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</section>

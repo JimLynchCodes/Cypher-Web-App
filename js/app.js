@@ -1,7 +1,7 @@
 
 var myApp = angular.module('myApp',
     ['ngRoute', 'firebase'])
-    .constant('FIREBASE_URL', 'https://501login.firebaseio.com/')
+    .constant('FIREBASE_URL', 'https://cypher-app.firebaseio.com/')
 
 myApp.run(['$rootScope', '$location', function($rootScope, $location) {
   $rootScope.$on('$routeChangeError',
@@ -33,6 +33,16 @@ myApp.config(['$routeProvider', function($routeProvider) {
         }
       }
     }).
+      when('/cypher-room', {
+        templateUrl: 'partials/cypher-room.html',
+        controller: 'CypherRoomController'
+      }).
+      when('/cypher-list', {
+        templateUrl: 'partials/cypher-list.html',
+        controller: 'CypherListController'
+      })
+
+      .
     otherwise({
       redirectTo: '/login'
     });

@@ -5,6 +5,28 @@
     <title></title>
 </head>
 <body>
+<p>Welcome to this Cypher!</p>
+
+<div>
+    <div ng-controller="HomeCtrl as controller" class="videogular-container">
+        <videogular vg-theme="controller.config.theme.url">
+            <vg-media vg-src="controller.config.sources"
+                      vg-tracks="controller.config.tracks"
+                      vg-native-controls="true">
+            </vg-media>
+        </videogular>
+    </div>
+</div>
+
+<p>Room Id: {{currentRoomSelected.id}}</p>
+
+<span>
+   <p>Upload your file:</p>
+      <input type="file" />
+</span>
+
+
+
 
 </body>
 </html>
