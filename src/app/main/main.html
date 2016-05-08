@@ -1,0 +1,73 @@
+<div class="container">
+
+  <div>
+    <acme-navbar creation-date="main.creationDate"></acme-navbar>
+  </div>
+
+  <br>
+  <div>
+    <h1>Public Cypher - Room A273</h1>
+  </div>
+  <br>
+
+  <span>Upload a line: <input type="file" file-input="files" id="take-picture" ng-model="vm.videos" accept="video/*"
+                              capture="camera">
+    </span>
+  <br>
+
+  <div class="video-area" id="data-vid" class="large-8 columns">
+    <!--video will be inserted here.-->
+  </div>
+
+  <h2>Lines</h2>
+
+  <div ng-if="vm.uploadedVideos.length === 0">
+    <p>
+
+    </p> (No lines have been spit yet.)
+  </div>
+
+  <span ng-repeat="video in vm.uploadedVideos" ng-click="vm.iconClicked($index)">
+    <span class="glyphicon glyphicon-film big-glyph">
+    </span>
+  </span>
+
+
+  <br>
+  <br>
+
+  <h2>Now Playing:</h2>
+  <p id="name-vid"></p>
+  <p id="size-vid"></p>
+  <p id="type-vid"></p>
+
+
+  <!--<button ng-click="vm.previousBtnClicked()"> Previous</button>-->
+  <!--<br>-->
+  <br>
+
+  <h1>Comments</h1>
+
+  <div ng-if="vm.comments.length === 0">
+    (No commented have been added yet.)
+  </div>
+
+  <li ng-repeat="comment in vm.comments">
+    {{comment.user}}: {{comment.text}}
+  </li>
+
+  <br>
+
+  <h1>Add a Comment</h1>
+  <form ng-submit="vm.commentSubmit()">
+
+
+    <div>
+      <textarea placeholder="Some text" cols="40" rows="8" ng-model="vm.commentText"/>
+    </div>
+
+    <input type="submit"/>
+  </form>
+
+
+</div>
